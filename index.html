@@ -111,6 +111,43 @@
       color: #64748b;
       font-size: 0.95rem;
     }
+
+    .image-preview {
+      position: relative;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .image-preview:hover {
+      text-decoration: underline;
+    }
+    
+    .image-preview span {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 25px;
+      z-index: 100;
+      background: white;
+      padding: 8px;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    
+    .image-preview:hover span {
+      display: block;
+    }
+    
+    .image-preview img {
+      width: 400px;
+      max-width: 70vw;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+    }
+    
   </style>
 </head>
 
