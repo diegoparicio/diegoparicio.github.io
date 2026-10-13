@@ -148,35 +148,26 @@
       border-radius: 6px;
     }
 
-        /* Estilos SOLO para la previsualización del certificado */
+    /* Estilos SOLO para la previsualización del certificado */
     .cert-preview span {
-      display: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-      background: none;      /* quita el fondo blanco del estilo antiguo */
-      padding: 0;
-      border: none;
-      box-shadow: none;
+      left: 100%;          /* a la derecha del enlace, no encima */
+      top: 0;              /* alineado arriba con el enlace */
+      margin-left: 10px;   /* un pequeño hueco entre el 🔗 y la imagen */
+      z-index: 100;        /* por encima, como los demás */
+      opacity: 1;          /* opaco, sin transparencia */
+      transform: none;     /* quita el centrado del intento anterior */
     }
     
     .cert-preview:hover span {
       display: block;
-      opacity: 1;
     }
     
     .cert-preview img {
-      width: 320px;
-      max-width: 60vw;
+      width: 400px;        /* el mismo tamaño que tus otros enlaces */
+      max-width: 70vw;
       height: auto;
       display: block;
       border-radius: 6px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     }
     
   </style>
