@@ -169,7 +169,53 @@
       display: block;
       border-radius: 6px;
     }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
     
+    .lightbox:target {
+      display: flex;
+    }
+    
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    
+    .verify-link {
+      margin-top: 16px;
+      color: #fff;
+      background: #2563eb;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .verify-link:hover {
+      background: #1d4ed8;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 28px;
+      text-decoration: none;
+    }
+
   </style>
 </head>
 
@@ -398,17 +444,16 @@
     <section>
       <h2>Certificaciones</h2>
       <ul>
-        <li>
-          <strong>Microsoft Certified: Azure AI Fundamentals</strong> (2026)
-          <a href="images/certificacion-azure-ai.png"
-             target="_blank"
-             class="image-preview cert-preview">
-            🔗
-            <span>
-              <img src="images/certificacion-azure-ai.png" alt="Captura del certificado">
-            </span>
-          </a>
-        </li>
+      <li>
+        <strong>Microsoft Certified: Azure AI Fundamentals</strong> (2026)
+        <a href="#cert-azure-ai"
+           class="image-preview cert-preview">
+          🔗
+          <span>
+            <img src="images/certificacion-azure-ai.png" alt="Captura del certificado">
+          </span>
+        </a>
+      </li>
         <li>Curso de Análisis de Datos con Python – Desafío Latam</li>
         <li>Curso de Analista de Datos – Data Science For Business</li>
       </ul>
@@ -427,6 +472,17 @@
   <footer>
     © 2026 Diego Paricio · Portfolio profesional desarrollado con GitHub Pages
   </footer>
+
+ <div id="cert-azure-ai" class="lightbox">
+  <a href="#" class="lightbox-close">✕</a>
+  <img src="images/certificacion-azure-ai.png" alt="Certificado Azure AI Fundamentals">
+  <a href="https://learn.microsoft.com/es-es/users/diegopariciovicente-4848/credentials/certification/azure-ai-fundamentals"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="verify-link">
+    ✓ Verificar credencial en Microsoft Learn →
+  </a>
+</div> 
 
 </body>
 </html>
